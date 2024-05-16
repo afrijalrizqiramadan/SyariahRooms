@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools"
+    android:id="@+id/HomeViewCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:background="@drawable/home_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llcenter"
+            android:gravity="center_horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/logo_home"
+               />
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/HomeWelcomeUserLabelContainerLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llcenter">
+
+                <TextView
+                    android:id="@+id/HomeGreetingLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/good_morning"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/HomeWelcomeUserLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/space"
+                    android:text="User"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/BookingPodDestinationContainerCV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HomeWelcomeUserLabelContainerLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/BookingPodDestinationTV"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="24dp"-->
+                    <!--android:layout_marginTop="24dp"-->
+                    <!--android:fontFamily="@font/san_francisco"-->
+                    <!--android:text="@string/stay_at_colon"-->
+                    <!--android:textColor="@color/label"-->
+                    <!--android:textSize="12sp"-->
+                    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/HomeLocationHotelTV"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="24dp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_marginRight="20dp"-->
+                    <!--android:fontFamily="@font/san_francisco"-->
+                    <!--android:textColor="@color/mainTheme"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:transitionName="searchTransition"-->
+                    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                    <!--app:layout_constraintRight_toRightOf="parent"-->
+                    <!--app:layout_constraintTop_toBottomOf="@+id/BookingPodDestinationTV" />-->
+                    <LinearLayout
+
+                        android:id="@+id/HomeLocationHotelTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="20"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/search" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="55"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/san_francisco"
+                                android:text="Stay at"
+                                android:textColor="@color/grey_500"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/text_view_search_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/san_francisco"
+                                android:hint="Hotel Destination"
+                                android:maxLines="1"
+                                android:textColor="@color/grey_500"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="25"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/image_view_my_location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/BookingPodline1View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeLocationHotelTV" />
+
+                    <TextView
+                        android:id="@+id/BookingPodCheckInLabelTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/san_francisco"
+                        android:text="@string/check_in_colon"
+                        android:textColor="@color/label"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodline1View" />
+
+                    <TextView
+                        android:id="@+id/HomeCheckInDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/san_francisco"
+                        android:text="Sen, 20 Mar 19"
+                        android:textColor="@color/mainTheme"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodCheckInLabelTV" />
+
+                    <View
+                        android:id="@+id/BookingPodVerticalLineView"
+                        android:layout_width="1dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="31dp"
+                        android:background="@color/line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeLocationHotelTV" />
+
+                    <TextView
+                        android:id="@+id/BookingPodDurationLabelTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="31dp"
+                        android:fontFamily="@font/san_francisco"
+                        android:text="@string/check_out_colon"
+                        android:textColor="@color/label"
+                        android:textSize="12sp"
+                        app:layout_constraintLeft_toRightOf="@+id/BookingPodVerticalLineView"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeLocationHotelTV" />
+
+                    <TextView
+                        android:id="@+id/HomeCheckOutDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/san_francisco"
+                        android:text="Sen, 21 Mar 19"
+                        android:textColor="@color/mainTheme"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="@+id/BookingPodDurationLabelTV"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodCheckInLabelTV" />
+
+                    <LinearLayout
+                        android:id="@+id/HomeCheckOutContainerLL"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="24dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeCheckInDateTV">
+
+                        <TextView
+                            android:id="@+id/tvNight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/nights"
+                            android:drawablePadding="@dimen/activity_horizontal_margin"
+                            android:fontFamily="@font/san_francisco"
+                            android:text="1 Malam"
+                            android:textColor="@color/giftCertificate"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/BookingPodline2View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeCheckOutContainerLL" />
+
+                    <LinearLayout
+                        android:id="@+id/HomeKamarTamuTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="24px"
+                        android:weightSum="2"
+                        app:layout_constraintLeft_toLeftOf="@+id/BookingPodline3View"
+                        app:layout_constraintRight_toRightOf="@+id/BookingPodline2View"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodline2View">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/BookingPodCheckInLabelTV1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/san_francisco"
+                                android:text="Total Tamu"
+                                android:textColor="@color/label"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                            <TextView
+                                android:id="@+id/tvTamu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/san_francisco"
+                                android:text="1 Tamu"
+                                android:textColor="@color/mainTheme"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/BookingPodCheckInLabelTV1" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/BookingPodVerticalLineView1"
+                            android:layout_width="1dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/line"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/BookingPodDurationLabelTV1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="16dp"
+                                android:fontFamily="@font/san_francisco"
+                                android:text="Total Kamar"
+                                android:textColor="@color/label"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@+id/BookingPodVerticalLineView1"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tvKamar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:layout_marginTop="5dp"
+                                android:fontFamily="@font/san_francisco"
+                                android:text="1 Kamar"
+                                android:textColor="@color/mainTheme"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="@+id/BookingPodDurationLabelTV1"
+                                app:layout_constraintTop_toBottomOf="@+id/BookingPodCheckInLabelTV1" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/HomePromoCodeCancelIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="fitXY"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/HomeKamarTamuTV"
+                        app:layout_constraintRight_toRightOf="@+id/BookingPodline2View"
+                        app:layout_constraintTop_toTopOf="@+id/HomeKamarTamuTV"
+                        app:srcCompat="@drawable/ic_cancel" />
+
+                    <View
+                        android:id="@+id/BookingPodline3View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/line"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeKamarTamuTV" />
+
+                    <TextView
+                        android:id="@+id/HomeGiftCertificateTV"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="24dp"
+                        android:fontFamily="@font/san_francisco"
+                        android:text="@string/use_your_gift_certificate"
+                        android:textColor="@color/giftCertificate"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/HomeGiftCertificateBalanceTV"
+                        app:layout_constraintLeft_toLeftOf="@+id/BookingPodline3View"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodline3View" />
+
+                    <TextView
+                        android:id="@+id/HomeGiftCertificateBalanceTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp. 25.000"
+                        android:textColor="@color/giftCertificate"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="@+id/HomeGiftCertificateTV"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeGiftCertificateTV" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/HomeGiftCertificateSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/SCBSwitch"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/HomeGiftCertificateBalanceTV"
+                        app:layout_constraintRight_toRightOf="@+id/BookingPodline2View"
+                        app:layout_constraintTop_toTopOf="@+id/HomeGiftCertificateTV" />
+
+                    <View
+                        android:id="@+id/BookingPodline4View"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="24dp"
+                        android:background="@color/line"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/HomeGiftCertificateBalanceTV" />
+
+                    <Button
+                        android:id="@+id/HomeSearchButton"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/round_corner_bobobox_button_orange_5dp"
+                        android:text="@string/search"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="@+id/BookingPodline2View"
+                        app:layout_constraintRight_toRightOf="@+id/BookingPodline2View"
+                        app:layout_constraintTop_toBottomOf="@+id/BookingPodline4View" />
+
+                    <com.github.silvestrpredko.dotprogressbar.DotProgressBar
+                        android:id="@+id/HomeSearchButtonDPB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        app:amount="3"
+                        app:animationDirection="right"
+                        app:endColor="@color/mainTheme"
+                        app:layout_constraintBottom_toBottomOf="@+id/HomeSearchButton"
+                        app:layout_constraintLeft_toLeftOf="@+id/HomeSearchButton"
+                        app:layout_constraintRight_toRightOf="@+id/HomeSearchButton"
+                        app:layout_constraintTop_toTopOf="@+id/HomeSearchButton"
+                        app:startColor="@color/mainTheme" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/HomeEmptyPromoIV"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/HomeHotelContainerCL" />
+
+            <ImageView
+                android:id="@+id/HomeEmptyPromoIV"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="50dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:srcCompat="@drawable/footer" />
+
+            <RelativeLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="@dimen/dimens_5dp"
+                app:layout_constraintTop_toBottomOf="@+id/BookingPodDestinationContainerCV">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/pageIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    app:piv_animationType="scale"
+                    app:piv_dynamicCount="true"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_selectedColor="@color/mainTheme"
+                    app:piv_unselectedColor="@color/grey_500"
+                    app:piv_viewPager="@id/view_pager"
+                    attrs:piv_padding="12dp"
+                    attrs:piv_radius="8dp" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/HomePromoContainerCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/slider">
+
+                <TextView
+                    android:id="@+id/HomeOngoingPromoLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/Article"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/HomePromoMoreTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more"
+                    android:textColor="@color/mainTheme"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toLeftOf="@+id/HomePromoMoreArrowIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/HomePromoMoreArrowIV"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_next_main_theme" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/HomeArticleRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/HomeOngoingPromoLabelTV" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/HomePromoShimmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HomeOngoingPromoLabelTV">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/place_holder_home_hotel" />
+
+                        <include layout="@layout/place_holder_home_hotel" />
+
+                        <include layout="@layout/place_holder_home_hotel" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/HomeHotelContainerCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/HomePromoContainerCL">
+
+                <TextView
+                    android:id="@+id/HomeOurCapsuleLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/Article"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/HomeHotelMoreTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/more"
+                    android:textColor="@color/mainTheme"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toLeftOf="@+id/HomeHotelMoreArrowIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/HomeHotelMoreArrowIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="30dp"
+                    android:visibility="invisible"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_next_main_theme" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/HomeHotelRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/HomeOurCapsuleLabelTV" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/HomeHotelShimmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/HomeOurCapsuleLabelTV">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <include layout="@layout/place_holder_home_hotel" />
+
+                        <include layout="@layout/place_holder_home_hotel" />
+
+                        <include layout="@layout/place_holder_home_hotel" />
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/changebackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blackTransparent"
+        android:visibility="invisible" />
+    <LinearLayout
+        android:id="@+id/my_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mainTheme" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingHorizontal="20dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Total Tamu"
+                    android:textSize="@dimen/text_16sp" />
+
+                <ListView
+                    android:id="@+id/listTamu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    android:dividerHeight="0dp">
+
+
+                </ListView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="20dp"
+                android:background="@color/line"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Total Kainvimar"
+                    android:textSize="@dimen/text_16sp" />
+
+                <ListView
+                    android:id="@+id/listKamar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@null"
+                    android:scrollbars="none"
+                    android:dividerHeight="0dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bsimpan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/round_corner_bobobox_button_orange_5dp"
+            android:gravity="center"
+            android:text="SIMPAN"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

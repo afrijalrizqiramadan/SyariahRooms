@@ -1,0 +1,1117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_hotel_filter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:id="@+id/sv_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_btn"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/grey_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif-medium"
+                android:lineSpacingExtra="6sp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/filter_by_label"
+                android:textColor="@color/grey_text_dark2"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingBottom="40dp"-->
+            <!--                android:paddingLeft="16dp"-->
+            <!--                android:paddingRight="16dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:fontFamily="sans-serif-medium"-->
+            <!--                    android:lineSpacingExtra="8sp"-->
+            <!--                    android:text="@string/price_range"-->
+            <!--                    android:textColor="@color/blackish"-->
+            <!--                    android:textSize="16sp"-->
+            <!--                    android:textStyle="normal" />-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="2dp"-->
+            <!--                    android:fontFamily="sans-serif"-->
+            <!--                    android:lineSpacingExtra="6sp"-->
+            <!--                    android:text="@string/per_night_per_room"-->
+            <!--                    android:textColor="@color/grey_text_dark2"-->
+            <!--                    android:textSize="14sp"-->
+            <!--                    android:textStyle="normal" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="20dp"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:fontFamily="sans-serif"-->
+            <!--                        android:lineSpacingExtra="4sp"-->
+            <!--                        android:text="@string/lowest_price"-->
+            <!--                        android:textColor="@color/grey_text_dark2"-->
+            <!--                        android:textSize="12sp"-->
+            <!--                        android:textStyle="normal" />-->
+
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:fontFamily="sans-serif"-->
+            <!--                        android:gravity="end"-->
+            <!--                        android:lineSpacingExtra="4sp"-->
+            <!--                        android:text="@string/highest_price"-->
+            <!--                        android:textColor="@color/grey_text_dark2"-->
+            <!--                        android:textSize="12sp"-->
+            <!--                        android:textStyle="normal" />-->
+            <!--                </LinearLayout>-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:baselineAligned="false"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="10">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_weight="5"-->
+            <!--                        android:baselineAligned="false"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:layout_marginEnd="4dp"-->
+            <!--                            android:layout_marginRight="4dp"-->
+            <!--                            android:text="@string/currency_symbol_rupiah"-->
+            <!--                            android:textAlignment="center" />-->
+
+            <!--                        <EditText-->
+            <!--                            android:id="@+id/edit_text_min_price"-->
+            <!--                            android:layout_width="140dp"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:background="@color/transparent"-->
+            <!--                            android:fontFamily="sans-serif"-->
+            <!--                            android:hint="@string/handling_fee_default_value"-->
+            <!--                            android:imeOptions="actionDone"-->
+            <!--                            android:inputType="numberDecimal"-->
+            <!--                            android:maxLength="10"-->
+            <!--                            android:maxLines="1"-->
+            <!--                            android:textColor="@color/blackish"-->
+            <!--                            android:textSize="14sp"-->
+            <!--                            android:textStyle="normal" />-->
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:layout_gravity="end"-->
+            <!--                        android:layout_weight="5"-->
+            <!--                        android:gravity="end"-->
+            <!--                        android:orientation="horizontal">-->
+
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:layout_gravity="end"-->
+            <!--                            android:layout_marginStart="50dp"-->
+            <!--                            android:layout_marginLeft="50dp"-->
+            <!--                            android:text="@string/currency_symbol_rupiah" />-->
+
+            <!--                        <EditText-->
+            <!--                            android:id="@+id/edit_text_max_price"-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="20dp"-->
+            <!--                            android:layout_gravity="end"-->
+            <!--                            android:layout_marginStart="4dp"-->
+            <!--                            android:background="@color/transparent"-->
+            <!--                            android:fontFamily="sans-serif"-->
+            <!--                            android:imeOptions="actionDone"-->
+            <!--                            android:inputType="numberDecimal"-->
+            <!--                            android:maxLength="10"-->
+            <!--                            android:maxLines="1"-->
+            <!--                            android:paddingRight="5dp"-->
+            <!--                            android:textAlignment="textEnd"-->
+            <!--                            android:textColor="@color/blackish"-->
+            <!--                            android:textSize="14sp"-->
+            <!--                            android:textStyle="normal" />-->
+            <!--                    </LinearLayout>-->
+            <!--                </LinearLayout>-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="4dp"-->
+            <!--                    android:orientation="horizontal"-->
+            <!--                    android:weightSum="2">-->
+
+            <!--                    <View-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="2dp"-->
+            <!--                        android:layout_marginEnd="10dp"-->
+            <!--                        android:layout_marginRight="10dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:background="@color/mainTheme" />-->
+
+            <!--                    <View-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="2dp"-->
+            <!--                        android:layout_marginStart="10dp"-->
+            <!--                        android:layout_marginLeft="10dp"-->
+            <!--                        android:layout_weight="1"-->
+            <!--                        android:background="@color/mainTheme" />-->
+            <!--                </LinearLayout>-->
+
+            <!--                <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar-->
+            <!--                    android:id="@+id/rangeSeekbar5"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    app:corner_radius="2"-->
+            <!--                    app:min_value="0"-->
+            <!--                    app:max_value="5000000"-->
+            <!--                    app:steps="10000"-->
+            <!--                    app:bar_color="@color/grayish"-->
+            <!--                    app:bar_highlight_color="@color/mainTheme"-->
+            <!--                    app:data_type="_integer"/>-->
+
+            <!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:background="@color/white"-->
+<!--                android:orientation="vertical"-->
+<!--                android:paddingLeft="16dp"-->
+<!--                android:paddingRight="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="16dp"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:lineSpacingExtra="8sp"-->
+<!--                    android:text="@string/filter_star"-->
+<!--                    android:textColor="@color/blackish"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="normal" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/layout_rating"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:paddingBottom="24dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_grade1"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:background="@drawable/rounded_border_edittext"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:tag="1"-->
+<!--                        app:layout_constraintDimensionRatio="60:56"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/layout_grade2"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="18dp"-->
+<!--                            android:layout_height="18dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="1dp"-->
+<!--                            android:layout_marginRight="1dp"-->
+<!--                            android:background="@drawable/ic_star_rating"-->
+<!--                            android:contentDescription="@string/img_desc_1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:text="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_grade2"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="7dp"-->
+<!--                        android:background="@drawable/rounded_border_edittext"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:tag="2"-->
+<!--                        app:layout_constraintDimensionRatio="60:56"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/layout_grade3"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/layout_grade1"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/layout_grade1">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="18dp"-->
+<!--                            android:layout_height="18dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="1dp"-->
+<!--                            android:layout_marginRight="1dp"-->
+<!--                            android:background="@drawable/ic_star_rating"-->
+<!--                            android:contentDescription="@string/img_desc_1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:text="2" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_grade3"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="7dp"-->
+<!--                        android:background="@drawable/rounded_border_edittext"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:tag="3"-->
+<!--                        app:layout_constraintDimensionRatio="60:56"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/layout_grade4"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/layout_grade2"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/layout_grade1">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="18dp"-->
+<!--                            android:layout_height="18dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="1dp"-->
+<!--                            android:layout_marginRight="1dp"-->
+<!--                            android:background="@drawable/ic_star_rating"-->
+<!--                            android:contentDescription="@string/img_desc_1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:text="3" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_grade4"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="7dp"-->
+<!--                        android:background="@drawable/rounded_border_edittext"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:tag="4"-->
+<!--                        app:layout_constraintDimensionRatio="60:56"-->
+<!--                        app:layout_constraintEnd_toStartOf="@+id/layout_grade5"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/layout_grade3"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/layout_grade1">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="18dp"-->
+<!--                            android:layout_height="18dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="1dp"-->
+<!--                            android:layout_marginRight="1dp"-->
+<!--                            android:background="@drawable/ic_star_rating"-->
+<!--                            android:contentDescription="@string/img_desc_1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:text="4" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_grade5"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="7dp"-->
+<!--                        android:background="@drawable/rounded_border_edittext"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:tag="5"-->
+<!--                        app:layout_constraintDimensionRatio="60:56"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/layout_grade4"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/layout_grade1">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="18dp"-->
+<!--                            android:layout_height="18dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="1dp"-->
+<!--                            android:layout_marginRight="1dp"-->
+<!--                            android:background="@drawable/ic_star_rating"-->
+<!--                            android:contentDescription="@string/img_desc_1" />-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:text="5" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/filter_main_facility"
+                    android:textColor="@color/blackish"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_main_feature1"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_wifi"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_wifi"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/img_desc_1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/wifi"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_ac"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="airConditioner"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/layout_feature_pool"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_wifi"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_wifi">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_ac" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/img_desc_1"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/filter_air_conditioner"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_pool"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="swimmingPool"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/layout_feature_park"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_ac"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_wifi">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_pool"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="26dp"
+                                android:text="@string/facility_swimmingpool"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_park"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_weight="1"
+
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="parking"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_pool"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_wifi">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_park"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/park"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_main_feature2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_restaurant"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:layout_weight="1"
+
+                            android:orientation="vertical"
+                            android:tag="restaurant"
+                            android:layout_marginHorizontal="5dp"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/layout_feature_room_service"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_restaurant"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/tv_hotel_room_fns_restaurant"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_room_service"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:layout_weight="1"
+
+                            android:orientation="vertical"
+                            android:tag="roomService"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/layout_feature_bar"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_restaurant"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_restaurant">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_room_service"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:text="@string/tv_hotel_room_fns_room_service"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_bar"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginHorizontal="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:tag="minibar"
+                            android:layout_weight="1"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toStartOf="@+id/layout_feature_spa"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_room_service"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_restaurant">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_bar"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/bar"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_feature_spa"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginStart="7dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:tag="spa"
+                            app:layout_constraintDimensionRatio="1:1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/layout_feature_bar"
+                            app:layout_constraintTop_toTopOf="@+id/layout_feature_restaurant">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginRight="1dp"
+                                android:background="@drawable/ic_spa"
+                                android:contentDescription="@string/img_desc_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center"
+                                android:minHeight="30dp"
+                                android:text="@string/spa"
+                                android:textColor="@color/blackish"
+                                android:textSize="12sp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="8sp"
+                    android:text="Lokasi"
+                    android:textColor="@color/blackish"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:orientation="vertical"-->
+            <!--                android:paddingLeft="16dp"-->
+            <!--                android:paddingRight="16dp">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="16dp"-->
+            <!--                    android:layout_marginBottom="16dp"-->
+            <!--                    android:fontFamily="sans-serif-medium"-->
+            <!--                    android:lineSpacingExtra="8sp"-->
+            <!--                    android:text="@string/main_drawer_promo"-->
+            <!--                    android:textColor="@color/blackish"-->
+            <!--                    android:textSize="16sp"-->
+            <!--                    android:textStyle="normal" />-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginBottom="16dp"-->
+            <!--                    android:orientation="vertical">-->
+
+            <!--                    <CheckBox-->
+            <!--                        android:id="@+id/checkbox_app_deals"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:paddingLeft="10dp"-->
+            <!--                        android:tag="discMobileAppFlg"-->
+            <!--                        android:text="Promo"-->
+            <!--                        android:textColor="@color/black"-->
+            <!--                        android:theme="@style/CheckBoxOrange" />-->
+            <!--                </LinearLayout>-->
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/filter_accommodation_type"
+                        android:textColor="@color/blackish"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_accommodation_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/cb_hotel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="typeHotel"
+                        android:text="Properti"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+
+                    <CheckBox
+                        android:id="@+id/checkbox_guesthouse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="typeGuestHouse"
+                        android:text="@string/filter_accommodation_guesthouse"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+
+
+
+                    <CheckBox
+                        android:id="@+id/checkbox_apartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="typeServicedApartment"
+                        android:text="@string/filter_accommodation_backpacker"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_hostel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="typeHostel"
+                        android:text="Villa"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_filter_accommodation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/quick_filter_type"
+                        android:textColor="@color/blackish"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/text_reset_filter_accomodation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="24dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:lineSpacingExtra="8sp"
+                        android:text="@string/reset"
+                        android:textColor="@color/mainTheme"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rg_filter_accomodation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="24dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:lineSpacingExtra="8sp"
+                    android:text="@string/filter_bed_type"
+                    android:textColor="@color/blackish"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/layout_filter_room_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="0dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_single"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="singleBed"
+                        android:text="@string/filter_bed_single"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_twin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="twinBed"
+                        android:text="@string/filter_bed_twin"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_double"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="doubleBed"
+                        android:text="@string/filter_bed_double"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_triple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="tripleBed"
+                        android:text="@string/filter_bed_triple"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_queen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="queenBed"
+                        android:text="@string/filter_bed_queen"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+
+                    <CheckBox
+                        android:id="@+id/cb_bed_king"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:paddingLeft="10dp"
+                        android:tag="kingBed"
+                        android:text="@string/filter_bed_king"
+                        android:textColor="@color/black"
+                        android:theme="@style/CheckBoxOrange" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/grey_background" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp">
+
+        <LinearLayout
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="11">
+
+            <TextView
+                android:id="@+id/tv_reset_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.8"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/msg_reset"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_simpan_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5.8"
+                android:background="@color/mainTheme"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:letterSpacing="0.04"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/msg_simpan"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

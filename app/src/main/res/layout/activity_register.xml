@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RegistrationViewSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/RegistrationLogoIV"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="44dp"
+            android:scaleType="fitXY"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <LinearLayout
+            android:id="@+id/guide"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/RegistrationFragmentContainerLL"
+            android:layout_width="match_parent"
+            android:layout_height="490dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/RegistrationButton"
+            app:layout_constraintTop_toBottomOf="@+id/RegistrationLogoIV"
+            tools:layout_editor_absoluteX="47dp">
+
+            <EditText
+                android:id="@+id/boboboxRegisterEmailET"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edittext_login_background"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterEmailLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/email"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxRegisterEmailET"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterEmailET"
+                app:layout_constraintTop_toTopOf="@+id/boboboxRegisterEmailET" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterEmailErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterEmailET"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterEmailET" />
+
+            <EditText
+                android:id="@+id/boboboxRegisterNamaET"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="108dp"
+                android:background="@drawable/edittext_login_background"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterNamaLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Nama Lengkap"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxRegisterNamaET"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterNamaET"
+                app:layout_constraintTop_toTopOf="@+id/boboboxRegisterNamaET" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterNamaErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterNamaET"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterNamaET" />
+
+
+            <TextView
+                android:id="@+id/boboboxRegisterGenderLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Jenis Kelamin"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterNamaErrorTV"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterNamaErrorTV" />
+
+            <RadioGroup
+                android:id="@+id/rdgender"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterNamaET"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterGenderLabelTV">
+
+                <RadioButton
+                    android:id="@+id/rblaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="Laki Laki"
+                    android:theme="@style/CheckBoxOrange" />
+
+                <RadioButton
+                    android:id="@+id/rbperempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perempuan"
+                    android:theme="@style/CheckBoxOrange" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/boboboxGenderErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/rdgender"
+                app:layout_constraintTop_toBottomOf="@+id/rdgender" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterDateET"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="264dp"
+                android:background="@drawable/edittext_login_background"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterDateLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Tanggal Lahir"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxRegisterDateET"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterDateET"
+                app:layout_constraintTop_toTopOf="@+id/boboboxRegisterDateET" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterDateErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterDateET"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterDateET" />
+
+            <EditText
+                android:id="@+id/boboboxRegisterTeleponET"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="336dp"
+                android:background="@drawable/edittext_login_background"
+                android:inputType="number"
+                android:paddingLeft="90dp"
+                android:paddingRight="10dp"
+                android:textSize="14sp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.rilixtech.CountryCodePicker
+                android:id="@+id/boboboxRegisterPhoneCountryCodeS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                app:ccp_defaultNameCode="ID"
+                app:ccp_hideNameCode="true"
+                app:ccp_textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/boboboxRegisterTeleponET"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterTeleponET"
+                app:layout_constraintTop_toTopOf="@+id/boboboxRegisterTeleponET" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterTeleponLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="No Telepon"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxRegisterTeleponET"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterTeleponET"
+                app:layout_constraintTop_toTopOf="@+id/boboboxRegisterTeleponET" />
+
+            <TextView
+                android:id="@+id/boboboxRegisterTeleponErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxRegisterTeleponET"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxRegisterTeleponET" />
+
+            <EditText
+                android:id="@+id/RegisterPasswordET"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="408dp"
+                android:background="@drawable/edittext_login_background"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                android:paddingRight="45dp"
+                android:textSize="14sp"
+                android:theme="@style/EditTextStyle"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/RegisterEmailPasswordLableTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:background="@android:color/white"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/password"
+                android:textColor="@color/mainTheme"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/RegisterPasswordET"
+                app:layout_constraintLeft_toLeftOf="@+id/RegisterPasswordET"
+                app:layout_constraintTop_toTopOf="@+id/RegisterPasswordET" />
+
+            <ImageView
+                android:id="@+id/RegisterShowPasswordIV"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@+id/RegisterPasswordET"
+                app:layout_constraintRight_toRightOf="@+id/RegisterPasswordET"
+                app:layout_constraintTop_toTopOf="@+id/RegisterPasswordET"
+                app:srcCompat="@drawable/design_ic_visibility" />
+
+            <TextView
+                android:id="@+id/RegisterPasswordErrorTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@+id/RegisterPasswordET"
+                app:layout_constraintTop_toBottomOf="@+id/RegisterPasswordET" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/RegistrationButton"
+            android:layout_width="205dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/round_corner_bobobox_button_orange_5dp"
+            android:elevation="@dimen/buttonElevation"
+            android:fontFamily="@font/san_francisco"
+            android:text="@string/register"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RegistrationFragmentContainerLL" />
+
+        <TextView
+            android:id="@+id/RegistrationRegisterLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/have_account"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/RegistrationLoginTV"
+            app:layout_constraintTop_toBottomOf="@+id/RegistrationButton" />
+
+        <TextView
+            android:id="@+id/RegistrationLoginTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/cornerRadius5dp"
+            android:text="@string/login"
+            android:textColor="@color/mainTheme"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/RegistrationRegisterLabelTV"
+            app:layout_constraintLeft_toRightOf="@+id/RegistrationRegisterLabelTV"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/RegistrationRegisterLabelTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingpaneregister"
+        android:visibility="invisible"
+        android:background="@color/black_transparant">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/mainTheme" />
+    </RelativeLayout>
+</RelativeLayout>

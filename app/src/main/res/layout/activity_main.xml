@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/boboboxMainSUPL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    app:umanoOverlay="false"
+    app:umanoPanelHeight="0dp"
+    app:umanoParallaxOffset="0dp"
+    app:umanoShadowHeight="4dp">
+
+    <RelativeLayout
+        android:id="@+id/boboboxMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main">
+
+            <RelativeLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottomNavigationView"
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_above="@+id/bottomNavigationView"
+                android:background="@drawable/above_shadow" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigationView"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                app:itemIconTint="@drawable/selector_tab_main"
+                app:itemTextColor="@drawable/selector_tab_main"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/menu" />
+        </RelativeLayout>
+
+        <!--<include-->
+        <!--android:id="@+id/dialogEmailContainerCL"-->
+        <!--layout="@layout/dialog_email"-->
+        <!--android:visibility="gone" />-->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/boboboxMainNightDragView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/lineGray" />
+
+        <View
+            android:layout_width="32dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/lineGray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/boboboxMainSelectNightHotelRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

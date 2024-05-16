@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/boboboxTabMenuHome"
+        android:icon="@drawable/selector_home"
+        android:title="Home" />
+    <!--    <item-->
+    <!--        android:id="@+id/boboboxTabMenuStay"-->
+    <!--        android:icon="@drawable/selector_stay"-->
+    <!--        android:title="Stay" />-->
+    <item
+        android:id="@+id/boboboxTabMenuMyAccount"
+        android:icon="@drawable/selector_my_account"
+        android:title="My Account" />
+    <item
+        android:id="@+id/boboboxTabMenuAbout"
+        android:icon="@drawable/selector_about"
+        android:title="About" />
+</menu>

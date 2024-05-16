@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white_choosed">
+
+        <LinearLayout
+            android:id="@+id/linear_layout_room_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:id="@+id/image_view_room_picture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@color/main"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_view_room_name"
+                        style="@style/Subhead"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="Kapasitas "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/kapasitasorang"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text=" Orang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="Sisa "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/sisakamar"
+                            android:text=""
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:text=" Kamar "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="3dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:layerType="software"-->
+<!--                android:src="@drawable/h_dotted_line" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <TextView
+                    android:text="Fasilitas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/cornerRadius5dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/rvfasilitaskamar" />
+
+                <!--                <LinearLayout-->
+<!--                    android:id="@+id/linear_layout_facilities"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_capacity"-->
+<!--                            android:layout_width="14dp"-->
+<!--                            android:layout_height="14dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:src="@drawable/guest_list_non_login" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_view_capacity"-->
+<!--                            style="@style/Caption"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/layout_room_size"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_room_size"-->
+<!--                            android:layout_width="14dp"-->
+<!--                            android:layout_height="14dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:src="@drawable/guest_list_non_login" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_view_room_size"-->
+<!--                            style="@style/Caption"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_breakfast"-->
+<!--                            android:layout_width="14dp"-->
+<!--                            android:layout_height="14dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:src="@drawable/guest_list_non_login" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_view_breakfast"-->
+<!--                            style="@style/Caption"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/linear_layout_wifi"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_wifi"-->
+<!--                            android:layout_width="14dp"-->
+<!--                            android:layout_height="14dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:src="@drawable/guest_list_non_login" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_view_wifi"-->
+<!--                            style="@style/Caption"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:id="@+id/image_view_refund"-->
+<!--                            android:layout_width="14dp"-->
+<!--                            android:layout_height="14dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginEnd="5dp"-->
+<!--                            android:src="@drawable/guest_list_non_login" />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/text_view_refund"-->
+<!--                            style="@style/Caption"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_weight="1" />-->
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layerType="software"
+                    android:src="@drawable/h_dotted_line" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/boboboxListItemSearchResultTotalPriceLabelTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Harga "
+                            android:textColor="@color/grayish"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_price_with_tax_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/boboboxListItemSearchResultTotalPriceNormalRpTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:text="@string/rp"
+                                android:layout_gravity="center"
+                                android:textSize="8sp"/>
+                            <TextView
+                                android:id="@+id/labelhargaasli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="2dp"
+                                android:text="0"
+                                android:textColor="@color/giftCertificate"
+                                android:textSize="14sp" />
+
+                            <!--                            <View-->
+                            <!--                                android:id="@+id/boboboxListItemSearchResultRpGuideView"-->
+                            <!--                                android:layout_width="8dp"-->
+                            <!--                                android:layout_height="10dp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/boboboxListItemSearchResultTotalPriceDiscountRpTV"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_marginTop="3dp"-->
+                            <!--                                android:layout_gravity="center"-->
+
+                            <!--                                android:text="@string/rp"-->
+                            <!--                                android:textSize="8sp" />-->
+
+                            <!--                            <TextView-->
+                            <!--                                android:id="@+id/boboboxListItemSearchResultTotalPriceDiscountTV"-->
+                            <!--                                android:layout_width="wrap_content"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_marginLeft="3dp"-->
+                            <!--                                android:text="0"-->
+                            <!--                                android:textColor="@color/giftCertificate"-->
+                            <!--                                android:textSize="14sp" />-->
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="2dp"
+                                android:src="@drawable/facilities_info"
+                                android:tint="@color/blackish" />
+                            <TextView
+                                style="@style/Caption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:ellipsize="end"
+                                android:layout_marginLeft="@dimen/cornerRadius5dp"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="@string/msg_price_with_tax"
+                                android:textColor="@color/label"
+                                android:textSize="8sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btmin"
+                                android:layout_width="@dimen/dimens_40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/roundleft_corner_bobobox_button_orange_5dp"
+                                android:text="-"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnumber"
+                                android:layout_width="60dp"
+                                android:layout_height="40dp"
+                                android:background="@color/gray_divider"
+                                android:text="0"
+                                android:textColor="@color/mdtp_light_gray"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btplus"
+                                android:layout_width="@dimen/dimens_40dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/roundright_corner_bobobox_button_orange_5dp"
+                                android:text="+"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+</LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

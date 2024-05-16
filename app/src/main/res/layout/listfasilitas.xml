@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/tv_gambarfasilitas"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/ic_facilities_wifi" />
+
+        <TextView
+            android:id="@+id/tv_namafasilitas"
+            style="@style/Caption"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Teks"
+            android:textAlignment="center" />
+    </LinearLayout>
+</LinearLayout>

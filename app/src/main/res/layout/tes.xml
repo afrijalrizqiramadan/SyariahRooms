@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:paddingLeft="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/abc_text_size_title_material" android:id="@+id/text_view_hotel_name" android:background="@color/white" android:paddingLeft="10dp" android:paddingTop="@dimen/padding_passenger_dialog" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/dummy_hotel_name" android:layout_weight="1"/>
+                    <android.widget.IconTextView android:textColor="@color/orange_light_1" android:id="@+id/itv_hotel_grade" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/padding_passenger_dialog" android:text="{fa-grade}"/>
+                </LinearLayout>
+                <TextView android:textSize="@dimen/abc_text_size_small_material" android:id="@+id/tv_room_type_name" android:background="@color/white" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingTop="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/dummy_roomy_type_name" android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_check_in" android:layout_weight="1"/>
+                <TextView android:gravity="end" android:id="@+id/text_view_checkin_date" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/dummy_checkin_date"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_check_out" android:layout_weight="1"/>
+                <TextView android:gravity="end" android:id="@+id/text_view_check_out_date" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/dummy_checkout_date"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_range_day" android:layout_weight="1"/>
+                <TextView android:gravity="end" android:id="@+id/tv_range_day" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dummy_range_day"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/grey_line" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/lin_price_total_info2" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin">
+                        <TextView android:textStyle="normal" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_total" android:layout_weight="1"/>
+                        <TextView android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/currency_symbol_rupiah" android:layout_marginEnd="5dp"/>
+                        <TextView android:gravity="end" android:id="@+id/tv_hotel_price" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/price_total_sample_value"/>
+                    </LinearLayout>
+                    <TextView android:textColor="@color/green_unique_id" android:id="@+id/text_view_unique_code_info" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/hotel_decreased_by_unique_code"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="@color/grey_line" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <TextView android:textColor="@color/grey_text" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_tax" android:layout_weight="1"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/currency_symbol_rupiah" android:layout_marginEnd="5dp"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:id="@+id/tv_hotel_tax" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/price_total_sample_value"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/grey_text" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_handling_fee" android:layout_weight="1"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/currency_symbol_rupiah" android:layout_marginEnd="5dp"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:id="@+id/tv_hotel_handling_fee" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/price_total_sample_value"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/grey_text" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_discount" android:layout_weight="1"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/currency_symbol_rupiah" android:layout_marginEnd="5dp"/>
+                    <TextView android:textColor="@color/grey_text" android:gravity="end" android:id="@+id/text_view_hotel_discount" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/price_total_sample_value"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/lin_price_total_info" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:paddingBottom="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:background="@color/grey_bg" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin" android:layout_marginBottom="@dimen/activity_horizontal_margin">
+                    <TextView android:textStyle="bold" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_hotel_total" android:layout_weight="1"/>
+                    <TextView android:textStyle="bold" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:text="@string/currency_symbol_rupiah"/>
+                    <TextView android:textStyle="bold" android:gravity="right" android:id="@+id/tv_hotel_total_price" android:paddingRight="10dp" android:layout_width="90dp" android:layout_height="wrap_content" android:text="@string/dummy_hotel_total_price"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@color/grey_bg" android:padding="@dimen/padding_passenger_dialog" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <TextView android:textStyle="bold" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/tv_guest_detail" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <TextView android:textSize="@dimen/abc_text_size_small_material" android:background="@color/white" android:paddingLeft="@dimen/padding_passenger_dialog" android:paddingRight="@dimen/padding_passenger_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_guest_name"/>
+                    <TextView android:textSize="@dimen/abc_text_size_small_material" android:id="@+id/tv_guest_name" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dummy_passenger_name"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

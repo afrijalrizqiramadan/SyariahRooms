@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".articleActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/mainTheme"
+        style="@style/AppTheme.Toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/dimens_25dp"
+                android:layout_height="@dimen/dimens_25dp"
+                android:id="@+id/backpreseds"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_left" />
+            <!--        <EditText-->
+            <!--            android:id="@+id/et_search"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_marginStart="10dp"-->
+            <!--            android:layout_weight="1"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:background="@drawable/rounded_search"-->
+            <!--            android:hint="Cari kota atau Hotel"-->
+            <!--            android:padding="10dp"-->
+            <!--            android:singleLine="true"-->
+            <!--            android:textColorHint="@color/white" />-->
+
+            <TextView
+                android:id="@+id/et_search"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Pilih Lokasi"
+                android:padding="10dp"
+                android:textColorHint="@color/white" />
+            <!--        <ImageView-->
+            <!--            android:id="@+id/image_view_search"-->
+            <!--            android:layout_gravity="center"-->
+            <!--            android:layout_marginHorizontal="@dimen/dimens_10dp"-->
+            <!--            android:layout_width="@dimen/dimens_32dp"-->
+            <!--            android:layout_height="@dimen/dimens_32dp"-->
+            <!--            android:src="@drawable/action_bar_search"/>-->
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingHorizontal="@dimen/cornerRadius10dp"
+            android:layout_height="@dimen/dimens_60dp"
+            android:id="@+id/tmalang"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimens_25dp"
+                android:layout_height="@dimen/dimens_25dp"
+                android:src="@drawable/ic_nearby_place_location"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimens_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_18sp"
+                android:text="Malang"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingHorizontal="@dimen/cornerRadius10dp"
+            android:layout_height="@dimen/dimens_60dp"
+            android:id="@+id/tsemarang"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimens_25dp"
+                android:layout_height="@dimen/dimens_25dp"
+                android:src="@drawable/ic_nearby_place_location"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimens_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_18sp"
+                android:text="Semarang"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineGray"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingHorizontal="@dimen/cornerRadius10dp"
+            android:layout_height="@dimen/dimens_60dp"
+            android:id="@+id/tbatu"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="@dimen/dimens_25dp"
+                android:layout_height="@dimen/dimens_25dp"
+                android:src="@drawable/ic_nearby_place_location"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dimens_20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_18sp"
+                android:text="Batu"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lineGray"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/boboboxStayViewCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/boboboxStayToolbar"
+        layout="@layout/toolbarstay" />
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="4dp"-->
+    <!--        android:background="@drawable/below_shadow"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/boboboxStayToolbar" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/boboboxStayDailyButton"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="@dimen/buttonHeight"-->
+    <!--        android:layout_marginLeft="16dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:background="@drawable/round_corner_left_active"-->
+    <!--        android:text="@string/daily"-->
+    <!--        android:textColor="@color/mainTheme"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--        app:layout_constraintRight_toLeftOf="@+id/boboboxStayHourlyButton"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/boboboxStayToolbar" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/boboboxStayHourlyButton"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="@dimen/buttonHeight"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:background="@drawable/round_corner_right"-->
+    <!--        android:text="@string/hourly"-->
+    <!--        android:textColor="@color/stayButtonCorner"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintLeft_toRightOf="@+id/boboboxStayDailyButton"-->
+    <!--        app:layout_constraintRight_toRightOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/boboboxStayToolbar" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/boboboxStayTabRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxStayToolbar" />
+
+    <TextView
+        android:id="@+id/boboboxStayLabelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/number_of_active_stay_label"
+        android:textColor="@color/stayButtonCorner"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxStayTabRV" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/boboboxStayPodRV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxStayLabelTV" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/boboboxStayPendingShimmerLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxStayLabelTV">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/place_holder_stay" />
+
+            <include layout="@layout/place_holder_stay" />
+
+            <include layout="@layout/place_holder_stay" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/boboboxStayEmptyLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxStayTabRV">
+
+        <TextView
+            android:id="@+id/boboboxStayEmptyLabelTV"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/empty_active_stay_label"
+            android:textColor="@color/stayButtonCorner"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/boboboxStayBookingButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round_corner_bobobox_button_orange_5dp"
+            android:text="@string/booking"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

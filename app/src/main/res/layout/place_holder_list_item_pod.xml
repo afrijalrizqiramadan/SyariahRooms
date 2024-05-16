@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/boboboxSearchResultContainerCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/boboboxPlaceHolderListItemSearchResultCL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV"
+            android:layout_width="105dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultCL"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultCL">
+
+            <View
+                android:id="@+id/boboboxPlaceHolderListItemSearchResultImageIV"
+                android:layout_width="105dp"
+                android:layout_height="95dp"
+                android:background="@color/placeHolderBackground2" />
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResulTypeTV"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultCL" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultGuestLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:text="2 Guests per room - 6 m"
+            android:textSize="10sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResulTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResulTypeTV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultWifiIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResulTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultGuestLabelTV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultFacility1TV"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultWifiIV"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultWifiIV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultWifiIV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultACIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResulTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultWifiIV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultFacility2TV"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultACIV"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultACIV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultACIV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultControllerIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResulTypeTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultACIV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultFacility3TV"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultControllerIV"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultControllerIV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultControllerIV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultMinusIV"
+            app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultPlusIV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultTotalPodTV"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultMinusIV"
+            app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultPlusIV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultPlusIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="17dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodTV"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultMinusIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="17dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodTV"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPodLabelTV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultLineView"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/lineGray"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultCL"
+            app:layout_constraintRight_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultCL"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultMinusIV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceLabelTV"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultBookingButton" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceNormalTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/text_strike_orange"
+            android:text="Rp. 950.000"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceLabelTV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceDiscountTV"
+            android:layout_width="85dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultImageContainerCV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceNormalTV" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultRemainingRoomTV"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceLabelTV" />
+
+        <View
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultBookingButton"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultLineView" />
+
+        <TextView
+            android:id="@+id/boboboxPlaceHolderListItemSearchResultPriceDetailLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Price Detail"
+            android:textColor="@color/mainTheme"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultCL"
+            app:layout_constraintRight_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultCL"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultTotalPriceDiscountTV" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderListItemSearchResultPriceDetailLabelTV"
+            app:layout_constraintRight_toRightOf="@+id/boboboxPlaceHolderListItemSearchResultPriceDetailLabelTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderListItemSearchResultPriceDetailLabelTV"
+            app:srcCompat="@drawable/ic_down" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

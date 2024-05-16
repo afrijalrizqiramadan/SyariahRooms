@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/boboboxPlaceHolderReservationConfirmationViewRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/boboboxPlaceHolderReservationConfirmationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:background="@color/placeHolderBackground2" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/boboboxPlaceHolderReservationConfirmationPaymentContainerCL"
+        android:layout_below="@+id/boboboxPlaceHolderReservationConfirmationToolbar"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/mainTheme"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="14dp"
+                android:background="@color/placeHolderBackground2"
+                app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL"
+                app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL"
+                app:layout_constraintRight_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL"
+                app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/boboboxPlaceHolderReservationConfirmationContainer2CV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:elevation="@dimen/elevation4dp"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationLabelContainerLL">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationUsernameTV"
+                        android:layout_width="50dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationEditTV"
+                        android:layout_width="40dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="18dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationEmailTV"
+                        android:layout_width="100dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationUsernameTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckinLabelTV"
+                        android:layout_width="65dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationEmailTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckinDateTV"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationCheckinLabelTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckinCheckinTimeLabelTV"
+                        android:layout_width="100dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationCheckinDateTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationArrowIV"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationEmailTV"
+                        app:srcCompat="@drawable/ic_arrow_right" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckoutLabelTV"
+                        android:layout_width="80dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="45dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationEmailTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckoutDateTV"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationCheckoutLabelTV"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationCheckinLabelTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCheckinCheckoutTimeLabelTV"
+                        android:layout_width="100dp"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationCheckoutLabelTV"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationCheckinDateTV" />
+
+                    <View
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="13dp"
+                        android:background="@drawable/round_corner_grey_no_border_5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPodTypeLabelTV"
+                        android:layout_width="60dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPodTypeTV"
+                        android:layout_width="40dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeLabelTV" />
+
+                    <View
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/round_corner_grey_no_border_5dp"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeContainer"
+                        app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationCheckinCheckinTimeLabelTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationTotalPodLabelTV"
+                        android:layout_width="60dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationTotalPodTV"
+                        android:layout_width="10dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPodTypeLabelTV" />
+
+                    <View
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/round_corner_grey_no_border_5dp"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPriceLabelTV"
+                        android:layout_width="55dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationNightTV"
+                        android:layout_width="10dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPriceContainer"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPriceLabelTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationMapPointerIV"
+                        android:layout_width="29dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPodNameTV"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPodContainer" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPodNameTV"
+                        android:layout_width="100dp"
+                        android:layout_height="14dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationMapPointerIV"
+                        app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationPodAddressTV"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationMapPointerIV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationPodAddressTV"
+                        android:layout_width="120dp"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPodNameTV" />
+
+                    <View
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationLine1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/lineGray"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationPodAddressTV" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationCallHotelContainerCV"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:elevation="4dp"
+                        android:orientation="horizontal"
+                        app:cardBackgroundColor="@color/placeHolderBackground2"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/boboboxPlaceHolderReservationConfirmationDirectionContainerCV"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationLine1" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationDirectionContainerCV"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="30dp"
+                        android:elevation="4dp"
+                        app:cardBackgroundColor="@color/placeHolderBackground2"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationCallHotelContainerCV"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationLine1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/boboboxPlaceHolderReservationConfirmationContainer1CV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationContainer2CV">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateLabelTV"
+                        android:layout_width="95dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateIV"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateIV"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateLabelTV" />
+
+                    <LinearLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateBalanceContainerLL"
+                        android:layout_width="100dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="13dp"
+                        android:background="@color/placeHolderBackground2"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateIV"
+                        app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateLabelTV" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateTV"
+                        android:layout_width="116dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateBalanceContainerLL"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationGiftCertificateLabelTV" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/boboboxPlaceHolderReservationConfirmationVoucherContainerCV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationContainer1CV">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationVoucherLabelTV"
+                        android:layout_width="70dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderReservationConfirmationVoucherIV"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RelativeLayout
+                        android:id="@+id/boboboxPlaceHolderReservationConfirmationVoucherIV"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="45dp"
+                        android:background="@color/placeHolderBackground2"
+                        app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationVoucherLabelTV"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationVoucherLabelTV" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:srcCompat="@drawable/voucher_left_bottom_quarter_circle" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/voucher_right_top_quarter_circle" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="13dp"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationVoucherContainerCV" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/boboboxPlaceHolderReservationConfirmationToolbar"
+        android:background="@drawable/below_shadow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/boboboxPlaceHolderReservationConfirmationPaymentContainerCL"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/boboboxPlaceHolderReservationConfirmationTotalPriceLabelTV"
+            android:layout_width="70dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/placeHolderBackground2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPriceTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <RelativeLayout
+            android:id="@+id/boboboxPlaceHolderReservationConfirmationTotalPriceTV"
+            android:layout_width="140dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderReservationConfirmationTotalPriceLabelTV" />
+
+        <RelativeLayout
+            android:id="@+id/boboboxPlaceHolderReservationConfirmationPaymentButton"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/placeHolderBackground2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@+id/boboboxPlaceHolderReservationConfirmationPaymentContainerCL"
+        android:background="@drawable/above_shadow" />
+</RelativeLayout>

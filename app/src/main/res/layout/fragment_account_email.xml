@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:id="@+id/boboboxLoginAccountContainerCL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp">
+
+    <EditText
+        android:theme="@style/EditTextStyle"
+        android:textSize="14sp"
+        android:id="@+id/boboboxLoginEmailET"
+        android:background="@drawable/edittext_login_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/mainTheme"
+        android:id="@+id/boboboxLoginEmailLabelTV"
+        android:background="@android:color/white"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:text="@string/email"
+        app:layout_constraintBottom_toTopOf="@+id/boboboxLoginEmailET"
+        app:layout_constraintLeft_toLeftOf="@+id/boboboxLoginEmailET"
+        app:layout_constraintTop_toTopOf="@+id/boboboxLoginEmailET" />
+
+    <TextView
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_gravity="right"
+        android:id="@+id/boboboxLoginEmailErrorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/boboboxLoginEmailET"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxLoginEmailET" />
+</androidx.constraintlayout.widget.ConstraintLayout>

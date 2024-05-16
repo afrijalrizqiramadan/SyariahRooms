@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/boboboxAbout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/boboboxAboutToolbar"
+        layout="@layout/toolbarabout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxAboutToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/boboboxAboutRulesContainerCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/boboboxAboutAboutUsIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_about_us" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutAboutUsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/about_us"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutAboutUsIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutAboutUsIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutAboutUsIV" />
+
+                <View
+                    android:id="@+id/boboboxAboutLine1View"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutAboutUsTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutAboutUsTV" />
+
+                <ImageView
+                    android:id="@+id/boboboxAboutPrivacyPolicyIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutLine1View"
+                    app:srcCompat="@drawable/ic_privacy_policy" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutPrivacyPolicyTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/privacy_policy"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutPrivacyPolicyIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutPrivacyPolicyIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutPrivacyPolicyIV" />
+
+                <View
+                    android:id="@+id/boboboxAboutLine2View"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutPrivacyPolicyTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutPrivacyPolicyTV" />
+
+                <ImageView
+                    android:id="@+id/boboboxAboutTermsandConditionsIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutLine2View"
+                    app:srcCompat="@drawable/ic_terms_conditions" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutTermsandConditionsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/terms_conditions"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutTermsandConditionsIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutTermsandConditionsIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutTermsandConditionsIV" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutTermsandConditionsTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutTermsandConditionsTV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/above_shadow"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxAboutRulesContainerCL"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/below_shadow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxAboutRulesContainerCL" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/boboboxAboutContactContainerCL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxAboutRulesContainerCL">
+
+                <ImageView
+                    android:id="@+id/boboboxAboutCustomerServiceIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_costumer_service" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutCustomerServiceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/customer_service_phone"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutCustomerServiceIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutCustomerServiceIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutCustomerServiceIV" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutCustomerServiceLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/customer_service"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutCustomerServiceIV"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutCustomerServiceTV" />
+
+                <View
+                    android:id="@+id/boboboxAboutLine3View"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutCustomerServiceLabelTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutCustomerServiceLabelTV" />
+
+                <ImageView
+                    android:id="@+id/boboboxAboutInfoIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutLine3View"
+                    app:srcCompat="@drawable/ic_info_bobobox" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutInfoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/info_syariahrooms_email"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutInfoIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutInfoIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutInfoIV" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutInfoLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/info_syariahrooms"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutInfoIV"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutInfoTV" />
+
+                <View
+                    android:id="@+id/boboboxAboutLine4View"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutInfoLabelTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutInfoLabelTV" />
+
+                <ImageView
+                    android:id="@+id/boboboxAboutFranchiseIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutLine4View"
+                    app:srcCompat="@drawable/ic_info_franchise" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutFranchiseTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/info_franchise_email"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutFranchiseIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutFranchiseIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutFranchiseIV" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutFranchiseLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/info_franchise"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutFranchiseIV"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutFranchiseTV" />
+
+                <View
+                    android:id="@+id/boboboxAboutLine5View"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/lineGray"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutFranchiseLabelTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutFranchiseLabelTV" />
+
+                <ImageView
+                    android:id="@+id/boboboxAboutAppVersionIV"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="16dp"
+                    android:scaleType="fitXY"
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutLine5View"
+                    app:srcCompat="@drawable/ic_app_version" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutAppVersionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/app_version"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/boboboxAboutAppVersionIV"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutAppVersionIV"
+                    app:layout_constraintTop_toTopOf="@+id/boboboxAboutAppVersionIV" />
+
+                <TextView
+                    android:id="@+id/boboboxAboutAppVersionLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="26dp"
+                    android:text="@string/app_version"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/boboboxAboutAppVersionIV"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutAppVersionTV" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="17dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/boboboxAboutAppVersionLabelTV"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/boboboxAboutAppVersionLabelTV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/above_shadow"
+                app:layout_constraintBottom_toTopOf="@+id/boboboxAboutContactContainerCL"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@drawable/below_shadow"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boboboxAboutContactContainerCL" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/below_shadow"
+        app:layout_constraintTop_toBottomOf="@+id/boboboxAboutToolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

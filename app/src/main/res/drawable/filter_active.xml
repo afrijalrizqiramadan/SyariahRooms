@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="20dp"
+        android:height="30dp"
+        android:gravity="center">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/icon_filter" />
+    </item>
+    <item
+        android:width="8dp"
+        android:height="8dp"
+        android:gravity="top|right|center_vertical|center_horizontal|center"
+        android:right="2dp"
+        android:top="5dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/red" />
+        </shape>
+    </item>
+</layer-list>

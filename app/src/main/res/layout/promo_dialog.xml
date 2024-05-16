@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KODE PROMO"
+        android:layout_marginBottom="@dimen/dimens_10dp"
+        android:textSize="20dp"
+        android:gravity="center" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginVertical="@dimen/dimens_10dp"
+        android:src="@drawable/dotted" />
+
+    <EditText
+        android:id="@+id/etkodepromo"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:hint="Kode Promo"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:padding="@dimen/dimens_10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_login_background" />
+
+</LinearLayout>

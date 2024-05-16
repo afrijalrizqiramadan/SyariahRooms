@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    app:cardBackgroundColor="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/height200dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayStatusTV" >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="76dp"
+                app:cardBackgroundColor="@color/placeHolderBackground2"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayMapPointerIconIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayPodNameTV"
+            android:layout_width="100dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderPastStayMapPointerIconIV"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderPastStayMapPointerIconIV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderPastStayMapPointerIconIV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayNightIconIV"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayMapPointerIconIV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayNightTV"
+            android:layout_width="80dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="10dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderPastStayNightIconIV"
+            app:layout_constraintLeft_toRightOf="@+id/boboboxPlaceHolderPastStayNightIconIV"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderPastStayNightIconIV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayPodNumberTV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderPastStayPodNameTV"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderPastStayPodNameTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckinLabelTV"
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayNightIconIV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckinDateTV"
+            android:layout_width="100dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinLabelTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckinCheckinTimeLabelTV"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinDateTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayArrowIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinDateTV"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/boboboxPlaceHolderPastStayCheckinDateTV"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckoutLabelTV"
+            android:layout_width="70dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="45dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayNightTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckoutDateTV"
+            android:layout_width="100dp"
+            android:layout_height="16dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderPastStayCheckoutLabelTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinLabelTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayCheckinCheckoutTimeLabelTV"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxPlaceHolderPastStayCheckoutLabelTV"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinDateTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayStatusTV"
+            android:layout_width="180dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayCheckinCheckinTimeLabelTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/boboboxPlaceHolderPastStayExpireLabelTV"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            app:cardBackgroundColor="@color/placeHolderBackground2"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxPlaceHolderPastStayStatusTV" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

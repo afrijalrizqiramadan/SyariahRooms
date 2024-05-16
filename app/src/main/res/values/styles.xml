@@ -1,0 +1,272 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/mainTheme</item>
+        <item name="colorPrimaryDark">@color/mainTheme</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Header">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:textColor">@color/orange_dark</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="MyRadioButton">
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="DialogThemeDate" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/mainTheme</item>
+    </style>
+
+    <style name="ButtonDisable">
+        <item name="android:textColor">@color/grey_text_disable</item>
+        <item name="android:background">@color/grey_line</item>
+        <item name="android:clickable">false</item>
+    </style>
+
+    <style name="ButtonWhite">
+        <item name="android:textColor">@color/orange_dark</item>
+        <item name="android:background">@drawable/selector_button_rounded_white</item>
+    </style>
+
+    <style name="ButtonEditText">
+        <item name="android:textColor">?attr/editTextColor</item>
+        <item name="android:background">?attr/editTextBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ButtonOrangeStrokeNoBorder">
+        <item name="android:textColor">@color/orange_dark</item>
+    </style>
+
+    <style name="ButtonTextExtraSmall">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ButtonTextMedium">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="ButtonTextSmall">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="datepicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/mainTheme</item>
+        <item name="colorPrimaryDark">@color/mainTheme</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppTheme.MyMaterialTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Subhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Subhead.Regular">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    s
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">false</item>
+    </style>
+
+    <style name="AppTheme.Toolbar">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="SCBSwitch">
+        <item name="android:colorForeground">#42221f1f</item>
+        <item name="colorControlActivated">@color/mainTheme</item>
+        <item name="colorSwitchThumbNormal">@color/textHint</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:fontFamily">@font/san_francisco</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:fontFamily">@font/san_francisco</item>
+        <item name="colorControlActivated">@color/mainTheme</item>
+        <item name="colorControlHighlight">@color/textHint</item>
+        <item name="colorControlNormal">@color/textHint</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:fontFamily">@font/san_francisco</item>
+    </style>
+
+    <style name="Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Body1.TextWhite">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+    </style>
+
+    <style name="Body2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Body2.TextWhite">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+    </style>
+
+    <style name="CardViewHotelFacility">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+    </style>
+
+
+    <style name="Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Title.Orange">
+        <item name="android:color">@color/orange_dark</item>
+    </style>
+
+    <style name="Train">
+        <item name="colorPrimaryDark">@color/train_orange</item>
+    </style>
+
+    <style name="Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="CaptionMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="CaptionSmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Subcaption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="CheckBoxOrange">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/breadcump_disable</item>
+        <item name="colorAccent">@color/mainTheme</item>
+    </style>
+
+    <style name="CustomRatingBar">
+        <item name="android:progressDrawable">@drawable/star_rating_bar_full</item>
+    </style>
+
+    <style name="Discount">
+        <item name="android:textSize">12sp</item>
+        <item name="android:color">@color/orange</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="ButtonCopy">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/orange_dark</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">35dp</item>
+    </style>
+
+    <style name="MyButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/orange_dark</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:color">@color/orange_dark</item>
+    </style>
+
+    <style name="MyButton.Blue">
+        <item name="android:background">@drawable/selector_button_orange</item>
+    </style>
+
+    <style name="MyButton.DarkGrey">
+        <item name="android:background">@drawable/selector_button_darkgrey</item>
+    </style>
+
+    <style name="MyButton.Orange">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_button_orange</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="MyButton.OrangeHotelBody2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_button_orange</item>
+    </style>
+
+    <style name="MyButton.OrangeStroke">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:background">@drawable/bg_border_orange_bold</item>
+        <item name="android:paddingLeft">@dimen/padding_passenger_dialog</item>
+        <item name="android:paddingRight">@dimen/padding_passenger_dialog</item>
+    </style>
+
+    <style name="MyButton.OrangeStrokeNoShadow">
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:background">@drawable/bg_border_orange_bold</item>
+        <item name="android:paddingLeft">@dimen/padding_passenger_dialog</item>
+        <item name="android:paddingRight">@dimen/padding_passenger_dialog</item>
+    </style>
+
+    <style name="SpinnerBox">
+        <item name="android:background">@drawable/bg_spinner_box</item>
+        <item name="android:minHeight">40dp</item>
+    </style>
+
+    <style name="MyButton.OrangeTrain">
+        <item name="android:background">@drawable/selector_button_orange_train</item>
+    </style>
+
+    <style name="MyButtonEditText">
+        <item name="android:textColor">?attr/editTextColor</item>
+        <item name="android:gravity">right|center_horizontal|clip_horizontal</item>
+        <item name="android:background">?attr/editTextBackground</item>
+    </style>
+
+    <style name="MyButtonOrangeTrainBody2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/train_orange</item>
+    </style>
+</resources>

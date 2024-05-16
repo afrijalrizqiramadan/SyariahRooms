@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LoginViewSV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:scrollbars="none">
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/LoginLogoIV"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="90dp"
+            android:scaleType="fitXY"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+
+        <TextView
+            android:id="@+id/LoginContactChangeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_60dp"
+            android:textColor="@color/buttonOrange"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/boboboxLoginEmailET"
+            app:layout_constraintRight_toRightOf="@+id/LoginPasswordET"
+            app:layout_constraintTop_toBottomOf="@+id/LoginLogoIV" />
+
+        <EditText
+            android:id="@+id/boboboxLoginEmailET"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="208dp"
+            android:background="@drawable/edittext_login_background"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            android:theme="@style/EditTextStyle"
+            app:layout_constraintHorizontal_bias="0.534"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/mainTheme"
+            android:id="@+id/boboboxLoginEmailLabelTV"
+            android:background="@android:color/white"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:text="@string/email"
+            app:layout_constraintBottom_toTopOf="@+id/boboboxLoginEmailET"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxLoginEmailET"
+            app:layout_constraintTop_toTopOf="@+id/boboboxLoginEmailET" />
+
+        <TextView
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_gravity="right"
+            android:id="@+id/boboboxLoginEmailErrorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@+id/boboboxLoginEmailET"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxLoginEmailET" />
+<!--        <FrameLayout-->
+<!--            android:id="@+id/LoginFragmentContainerLL"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/LoginContactChangeTV" />-->
+
+        <EditText
+            android:id="@+id/LoginPasswordET"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittext_login_background"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="45dp"
+            android:textSize="14sp"
+            android:theme="@style/EditTextStyle"
+            app:layout_constraintHorizontal_bias="0.546"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/boboboxLoginEmailET" />
+
+        <TextView
+            android:id="@+id/LoginEmailPasswordLableTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:background="@android:color/white"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/password"
+            android:textColor="@color/mainTheme"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/LoginPasswordET"
+            app:layout_constraintLeft_toLeftOf="@+id/LoginPasswordET"
+            app:layout_constraintTop_toTopOf="@+id/LoginPasswordET" />
+
+        <ImageView
+            android:id="@+id/LoginShowPasswordIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/LoginPasswordET"
+            app:layout_constraintRight_toRightOf="@+id/LoginPasswordET"
+            app:layout_constraintTop_toTopOf="@+id/LoginPasswordET"
+            app:srcCompat="@drawable/design_ic_visibility" />
+
+        <TextView
+            android:id="@+id/LoginPasswordErrorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="@+id/LoginPasswordET"
+            app:layout_constraintTop_toBottomOf="@+id/LoginPasswordET" />
+
+        <TextView
+            android:id="@+id/LoginForgotPasswordTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:text="@string/forgot_password"
+            android:textColor="@color/mainTheme"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="@+id/LoginPasswordET"
+            app:layout_constraintTop_toBottomOf="@+id/LoginPasswordET" />
+
+        <Button
+            android:id="@+id/LoginButton"
+            android:layout_width="205dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_corner_bobobox_button_orange_5dp"
+            android:elevation="@dimen/buttonElevation"
+            android:fontFamily="@font/san_francisco"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/LoginForgotPasswordTV" />
+
+        <TextView
+            android:id="@+id/LoginRegisterLabelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/no_account"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/LoginRegisterTV"
+            app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
+
+        <TextView
+            android:id="@+id/LoginRegisterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/register"
+            android:textColor="@color/mainTheme"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/LoginRegisterLabelTV"
+            app:layout_constraintLeft_toRightOf="@+id/LoginRegisterLabelTV"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/LoginRegisterLabelTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/loadingpane"
+        android:visibility="invisible"
+        android:background="@color/black_transparant">
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/mainTheme"/>
+    </RelativeLayout>
+</RelativeLayout>
